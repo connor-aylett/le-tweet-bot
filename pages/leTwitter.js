@@ -9,7 +9,7 @@ function LeTwitter() {
     const [startingWord, setStartingWord] = useState("");
 
     //gramLength
-    let gramLength = 7;
+    let gramLength = 6;
 
     //set the tweets state to be Lebron's tweets
     useEffect(() => {
@@ -37,6 +37,7 @@ function LeTwitter() {
     
     return (  
         <div>
+            <h1 className='head'>LeTweet-bot 1.0 👑</h1>
             {generatedTweet && <p className = 'tweetContent'>{generatedTweet}</p>}
             <div className='genBlock'>
                 <label className='startLabel'>LeFirst Word:</label>
@@ -47,6 +48,7 @@ function LeTwitter() {
                  <br></br>
                 <button className='genButton' onClick = {generateNewTweet}>Generate</button>
             </div>
+            <p className='head'>github: @connor-aylett</p>
         </div>
     );
 }
