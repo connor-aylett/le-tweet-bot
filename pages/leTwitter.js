@@ -8,6 +8,9 @@ function LeTwitter() {
     const [generatedTweet, setGeneratedTweet] = useState("");
     const [startingWord, setStartingWord] = useState("");
 
+    //gramLength
+    let gramLength = 7;
+
     //set the tweets state to be Lebron's tweets
     useEffect(() => {
         (async () => {
@@ -30,16 +33,20 @@ function LeTwitter() {
     const Markov = require('js-markov');
     var markov = new Markov();
     markov.addStates(startingWord + " " + " It's " + tweets);
-    markov.train(5);
+    markov.train(gramLength);
     
     return (  
         <div>
-            <input
-            value = {startingWord}
-            onChange = {handleStartingWord}
-            ></input>
-            <button onClick = {generateNewTweet}>Generate</button>
-            <p>{generatedTweet}</p>
+            {generatedTweet && <p className = 'tweetContent'>{generatedTweet}</p>}
+            <div className='genBlock'>
+                <label className='startLabel'>LeFirst Word:</label>
+                <input className='starterWord'
+                value = {startingWord}
+                onChange = {handleStartingWord}
+                 ></input>
+                 <br></br>
+                <button className='genButton' onClick = {generateNewTweet}>Generate</button>
+            </div>
         </div>
     );
 }
