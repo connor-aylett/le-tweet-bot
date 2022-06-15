@@ -65,10 +65,14 @@ function Home() {
                  <br></br>
                 <button className='genButton' onClick = {generateNewTweet}>Generate</button>
             </div>
-            <button onClick = {displaySaved}>
+            <br></br>
+            <br></br>
+            <button className='showSavedButton' onClick = {displaySaved}>
                 {showSaved ? 'Hide' : 'Show'} Saved Tweets
                 </button>
-            {showSaved && <SavedTweets savedTweets={savedTweets}></SavedTweets>}
+                <div className='savedT'>
+                    {showSaved && <SavedTweets savedTweets={savedTweets}></SavedTweets>}
+                </div>
         </div>
     );
 }

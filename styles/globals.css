@@ -37,7 +37,7 @@ a {
   width: 60px;
   height:45px;
   border-radius: 30px;
-  margin-left: 10px;
+  margin-left: 14px;
 }
 
 .genBlock{
@@ -80,4 +80,23 @@ a {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 0px;
+}
+
+.showSavedButton{
+  cursor: pointer;
+  background-color: lightskyblue;
+  height: 30px;
+  width: 500px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 12px;
+  border: none
+}
+
+.savedT{
+  width: 800px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
