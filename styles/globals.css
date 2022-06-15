@@ -16,14 +16,28 @@ a {
 }
 
 .tweetContent{
-  margin-top: 20px;
   padding: 6px;
-  width: 600px;
   border-color: black;
   border-width: 4%;
   border-style: solid;
+}
+
+.tweetAndSave{
+  margin-top: 20px;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
+  width: 600px;
+  align-items: center;
+}
+
+.saveButton{
+  background-color: lightskyblue;
+  padding: 6px;
+  width: 60px;
+  height:45px;
+  border-radius: 30px;
+  margin-left: 10px;
 }
 
 .genBlock{
@@ -31,7 +45,6 @@ a {
   width: 200px;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .genButton{
@@ -68,4 +81,3 @@ a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 0px;
 }
-
