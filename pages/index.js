@@ -46,7 +46,10 @@ function Home() {
     //playing around with the js-markov library
     const Markov = require('js-markov');
     var markov = new Markov();
-    markov.addStates(startingWord + " " + " It's " + tweets);
+    let commonDefaults = [" There ", " Cleveland ", " Lakers ", " Watching ", " Like ", " People ", " It's ", 
+                            " Here's ", " That's ", " Congrats ", " Yessir ", " When "];
+    let randomDefault = commonDefaults[Math.floor(Math.random() * commonDefaults.length)];
+    markov.addStates(startingWord + " " + randomDefault + tweets);
     markov.train(gramLength);
     
     return (  
